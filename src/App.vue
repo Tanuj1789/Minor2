@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex-row">
+  <div>{{user}} space</div>
+  <div> SOS </div>
   </div>
+  <hr style="height:2px colour:black">
+    <Home user="user"/>
+     <div class="flex-row" >
+      <img src="@/assets/logo.png" class="circle"/>
+        <img src="@/assets/logo.png" class="circle"/>
+        <img src="@/assets/logo.png" class="circle">
+        <img src="@/assets/logo.png" class="circle"/>
+        <img src="@/assets/logo.png" class="circle"/>
+    </div>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from './components/Home.vue'
+// import Sospage from './components/sospage.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home,
+    // Sospage,
+  },
+  data(){
+    return {
+      user:"dpt's"
+    }
   }
 }
 </script>
@@ -23,6 +41,26 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* background:blue; */
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+}
+.flex-row{
+  display:flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.flex-end{
+  display:flex;
+  justify-content: flex-end;
+  align-content: space-around;
+  flex-grow: 1;
+}
+.circle{
+  max-width:10%;
+  flex-wrap:nowrap;
+  border-radius:50%;
+
 }
 </style>
