@@ -5,7 +5,7 @@
     <nav>
            <ul>
          <li>
-      {{user}} space
+     <router-link to="/Login" class=""> {{username}} space </router-link>
       <span></span><span></span><span></span><span></span>
     </li>
     </ul>
@@ -25,7 +25,8 @@
     </div>
   </div>
   <hr style="height:2px colour:black">
-    <Home user="user"/>
+  <router-view> </router-view>
+
      <div class="flex-row" >
       <!-- <img src="@/assets/logo.png" class="circle"/>
         <img src="@/assets/logo.png" class="circle"/>
@@ -38,18 +39,19 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
 // import Sospage from './components/sospage.vue'
 export default {
   name: 'App',
   components: {
-    Home,
     // Sospage,
   },
   data(){
     return {
-      user:"dpt's"
+      username:"dpt's"
     }
+  },
+  methods :{
+    
   }
 }
 </script>
