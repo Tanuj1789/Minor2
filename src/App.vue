@@ -1,17 +1,16 @@
 <template>
+
   <div id="app">
   <div class="flex-row">
-  <div>
+  <div >
     <nav>
            <ul>
          <li>
-      {{user}} space
+      {{user}}'s space
       <span></span><span></span><span></span><span></span>
     </li>
     </ul>
     </nav>
-
-
   </div>
   <div>
     <nav>
@@ -39,16 +38,16 @@
 
 <script>
 import Home from './components/Home.vue'
-// import Sospage from './components/sospage.vue'
+// import sospage from './components/sospage.vue'
 export default {
   name: 'App',
   components: {
     Home,
-    // Sospage,
+    //sospage,
   },
   data(){
     return {
-      user:"dpt's"
+      user:"dpt"
     }
   }
 }
@@ -88,11 +87,12 @@ background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, F
   border-radius:50%;
 
 }
+
 body{
-  background: #ee0979;  /* fallback for old browsers */
+
+/*background: #ee0979;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 nav ul {

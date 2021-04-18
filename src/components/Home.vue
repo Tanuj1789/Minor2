@@ -4,19 +4,19 @@
       <p> Selfcare Guide </p>
       <div class="flex-row space-between" style="flex-wrap:wrap">
         <div class="flex-column">
-            <div><img src="@/assets/2nd image.jpeg" class="circle border-r"/></div>
-             <div> <p> Meditation </p></div>
+            <div><a :href="urlmeditation" target="_blank"><img src="@/assets/2nd image.jpeg" class="circle border-r"/></a></div>
+             <div> <p> Meditation</p></div>
         </div>
         <div class="flex-column">
-            <div><img src="@/assets/3rd image.jpeg" class="circle border-r"/></div>
+            <div><a :href="urlremote" target="_blank"><img src="@/assets/3rd image.jpeg" class="circle border-r"/></a></div>
              <div> <p> Remote Wellness </p></div>
         </div>
         <div class="flex-column">
-            <div><img src="@/assets/Stress.jpg" class="circle border-r"/></div>
+            <div><a :href="urlstress" target="_blank"><img src="@/assets/Stress.jpg" class="circle border-r"/></a></div>
              <div> <p> Stress </p></div>
         </div>
         <div class="flex-column">
-            <div><img src="@/assets/sleep.jpeg" class="circle border-r"/></div>
+            <div><a :href="urlsleep" target="_blank"><img src="@/assets/sleep.jpeg" class="circle border-r"/></a></div>
              <div> <p> Sleep </p></div>
         </div>
       <hr style="width:80%;height:2px;background-color:gray">
@@ -61,14 +61,14 @@
     </li>
     </ul>
     </nav>
-        </div>;
+      </div>;
       </div>
       </div>
 
     </div>
 
   </div>
-
+  
 </template>
 
 <script>
@@ -80,7 +80,11 @@ export default {
   data(){
     return {
       schedule:"no upcoming",
-      Therapist:"not assigned"
+      Therapist:"not assigned",
+      urlmeditation: "https://markmanson.net/meditation/",
+      urlremote: "https://www.flexjobs.com/employer-blog/how-companies-can-use-meditation/",
+      urlstress: "https://www.berries.com/blog/stress-relief-activities",
+      urlsleep: "https://www.psycom.net/sleep-deprivation-test/",
     }
   }
 }
@@ -115,7 +119,7 @@ a {
   /* padding:1%; */
 }
 .bigimage{
-  background-image: url('D:\\Programming\\minorv1\\src\\assets\\panda.png');
+  /*background-image: url('D:\\Programming\\minorv1\\src\\assets\\panda.png');*/
   background-repeat: no-repeat;
   min-height:40vh;
   min-width:20% ;
@@ -134,6 +138,4 @@ a {
     justify-content: space-around;
     flex-grow:1;
 }
-
-
 </style>
